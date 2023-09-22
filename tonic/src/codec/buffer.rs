@@ -15,7 +15,7 @@ pub struct EncodeBuf<'a> {
 }
 
 impl<'a> DecodeBuf<'a> {
-    pub(crate) fn new(buf: &'a mut BytesMut, len: usize) -> Self {
+    pub fn new(buf: &'a mut BytesMut, len: usize) -> Self {
         DecodeBuf { buf, len }
     }
 }
@@ -53,7 +53,7 @@ impl Buf for DecodeBuf<'_> {
 }
 
 impl<'a> EncodeBuf<'a> {
-    pub(crate) fn new(buf: &'a mut BytesMut) -> Self {
+    pub fn new(buf: &'a mut BytesMut) -> Self {
         EncodeBuf { buf }
     }
 }
